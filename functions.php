@@ -5,10 +5,11 @@ if ( function_exists('register_nav_menus') ) {
 }
 
 if ( function_exists('add_theme_support') ) {
-        add_theme_support('post-thumbnails', array('post'));
-        add_image_size('category-thumb', 100, 100, true);
-        add_image_size('featured-banner', 800, 400, false);
-        set_post_thumbnail_size(100, 100, true);
+    add_theme_support('post-thumbnails', array('post'));
+    add_image_size('category-thumb', 100, 100, true);
+    add_image_size('featured-banner', 800, 400, false);
+    add_image_size('blog-banner', 800, 300, false);
+    set_post_thumbnail_size(100, 100, true);
 }
 
 function urs_scripts() {

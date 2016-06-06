@@ -11,11 +11,15 @@
 
 <div <?php post_class("row"); ?>>
 	<div class="medium-9 small-12 columns">
+        <div class="blog-banner">
+        <?php if ( has_post_thumbnail() ) :
+            $banner_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'blog-banner' );
+            ?>
+            <img src="<?php echo $banner_url[0]; ?>" class="blog-banner-image"/>
+        <?php endif; ?>
 		<a href="<?php the_permalink(); ?>" class="headline"><?php the_title(); ?></a>
+        </div>
 		<div class="abstract-container">
-		<?php if ( has_post_thumbnail() ) {
-			the_post_thumbnail('category-thumb');
-		} ?>
 		<?php the_excerpt(); ?>
 		</div>
 	</div>
